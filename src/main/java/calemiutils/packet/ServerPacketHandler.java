@@ -16,6 +16,7 @@ import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 
 public class ServerPacketHandler implements IMessage {
 
@@ -46,10 +47,13 @@ public class ServerPacketHandler implements IMessage {
 
         @Override
         public IMessage onMessage(ServerPacketHandler message, MessageContext ctx) {
-
+			FMLCommonHandler.instance().getWorldThread(ctx.netHandler).addScheduledTask(() -> handle(message, ctx));
+			return null;
+		}
+		private void handle(ServerPacketHandler message, MessageContext ctx) {
             String[] data = message.text.split("%");
-            EntityPlayer player = ctx.getServerHandler().player;
-            World world = player.world;
+			EntityPlayer player = ctx.getServerHandler().player;
+            World world = ctx.getServerHandler().player.getServerWorld();
 
             if (data[0].equalsIgnoreCase("te-enable")) {
 
@@ -121,7 +125,6 @@ public class ServerPacketHandler implements IMessage {
                 ItemInteractionInterfaceFilter.setFilterTooltip(stack, tooltip);
             }
 
-            return null;
         }
     }
 }

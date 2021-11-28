@@ -5,9 +5,11 @@ import calemiutils.util.Location;
 import calemiutils.util.helper.ItemHelper;
 import calemiutils.util.helper.PacketHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
@@ -28,9 +30,12 @@ public class TradingPostPacket extends ServerPacketHandler {
         @Override
         public IMessage onMessage(TradingPostPacket message, MessageContext ctx) {
 
+			FMLCommonHandler.instance().getWorldThread(ctx.netHandler).addScheduledTask(() -> handle(message, ctx));
+			return null;
+		}
+		private void handle(TradingPostPacket message, MessageContext ctx) {
             String[] data = message.text.split("%");
-            EntityPlayer player = ctx.getServerHandler().player;
-            World world = player.world;
+            World world = ctx.getServerHandler().player.getServerWorld();
 
             if (data[0].equalsIgnoreCase("setoptions")) {
 
@@ -86,7 +91,7 @@ public class TradingPostPacket extends ServerPacketHandler {
                 tileEntity.markForUpdate();
             }
 
-            return null;
+
         }
     }
 }

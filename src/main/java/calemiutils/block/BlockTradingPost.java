@@ -239,7 +239,7 @@ public class BlockTradingPost extends BlockInventoryContainerBase implements IEx
                             tePost.addStoredCurrencyInBank(tePost.salePrice);
                             tePost.markForUpdate();
 
-                            tePost.writeToNBT(tePost.getTileData());
+                            tePost.writeToNBT(tePost.getUpdateTag());
 
                             nbt.setInteger("balance", nbt.getInteger("balance") - tePost.salePrice);
                         }

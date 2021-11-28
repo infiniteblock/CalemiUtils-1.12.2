@@ -41,7 +41,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable {
     public SPacketUpdateTileEntity getUpdatePacket() {
 
         int meta = getBlockMetadata();
-        return new SPacketUpdateTileEntity(getPos(), meta, getTileData());
+        return new SPacketUpdateTileEntity(getPos(), meta, getUpdateTag());
     }
 
     @Override
@@ -64,17 +64,16 @@ public abstract class TileEntityBase extends TileEntity implements ITickable {
         readFromNBT(tag);
     }
 
-    @Override
+/*    @Override
     public NBTTagCompound getTileData() {
 
         NBTTagCompound nbt = new NBTTagCompound();
         writeToNBT(nbt);
         return nbt;
     }
-
+*/
     @Override
     public void readFromNBT(NBTTagCompound nbt) {
-
         if (this instanceof ISecurity) {
 
             ISecurity security = (ISecurity) this;
@@ -90,12 +89,12 @@ public abstract class TileEntityBase extends TileEntity implements ITickable {
         }
 
         enable = nbt.getBoolean("enable");
-        super.readFromNBT(nbt);
+		super.readFromNBT(nbt);
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
-
+	
         if (this instanceof ISecurity) {
 
             ISecurity security = (ISecurity) this;
@@ -111,6 +110,6 @@ public abstract class TileEntityBase extends TileEntity implements ITickable {
         }
 
         nbt.setBoolean("enable", enable);
-        return super.writeToNBT(nbt);
+		return super.writeToNBT(nbt);
     }
 }
