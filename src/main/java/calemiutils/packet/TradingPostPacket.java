@@ -53,8 +53,8 @@ public class TradingPostPacket extends ServerPacketHandler {
                         tileEntity.salePrice = Integer.parseInt(data[2]);
                     }
 
-                    tileEntity.amountForSale = MathHelper.clamp(tileEntity.amountForSale, 1, 1000);
-                    tileEntity.salePrice = MathHelper.clamp(tileEntity.salePrice, 0, 10000);
+                    tileEntity.amountForSale = MathHelper.clamp(tileEntity.amountForSale, 1, 1000000);
+                    tileEntity.salePrice = MathHelper.clamp(tileEntity.salePrice, 0, 1000000);
 
                     tileEntity.markForUpdate();
                 }
