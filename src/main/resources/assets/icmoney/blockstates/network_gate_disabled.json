@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "icmoney:network_gate_disabled"
+    }
+  }
+}

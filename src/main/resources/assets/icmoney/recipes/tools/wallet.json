@@ -1,0 +1,23 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "LLL",
+    "PCP",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "C": {
+      "item": "icmoney:coin_penny"
+    }
+  },
+  "result": {
+    "item": "icmoney:wallet",
+    "count": 1
+  }
+}

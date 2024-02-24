@@ -1,0 +1,23 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "CNC",
+    "NRN",
+    "CNC"
+  ],
+  "key": {
+    "C": {
+      "item": "icmoney:gold_chip"
+    },
+    "N": {
+      "item": "icmoney:network_cable"
+    },
+    "R": {
+      "item": "minecraft:repeater"
+    }
+  },
+  "result": {
+    "item": "icmoney:network_gate_connected",
+    "count": 1
+  }
+}

@@ -1,7 +1,7 @@
 {
     "pack": {
-        "description": "Calemi's Utils Pack",
+        "description": "IC Money's Utils Pack",
         "pack_format": 3,
-        "_comment": "Resources for Calemi's Utils"
+        "_comment": "Resources for IC Money"
     }
 }

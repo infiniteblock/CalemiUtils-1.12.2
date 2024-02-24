@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "icmoney:penny"
+    }
+  ],
+  "type": "forge:ore_shapeless",
+  "group": "coin_nickel",
+  "ingredients": [
+    {
+      "item": "icmoney:coin_penny"
+    },
+    {
+      "item": "icmoney:coin_penny"
+    },
+    {
+      "item": "icmoney:coin_penny"
+    },
+    {
+      "item": "icmoney:coin_penny"
+    },
+    {
+      "item": "icmoney:coin_penny"
+    }
+  ],
+  "result": {
+    "item": "icmoney:coin_nickel",
+    "count": 1
+  }
+}

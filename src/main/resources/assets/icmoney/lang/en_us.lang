@@ -1,0 +1,26 @@
+#Items
+
+item.coin_penny.name=Coin
+item.coin_nickel.name=Coin
+item.coin_quarter.name=Coin
+item.coin_dollar.name=Coin
+item.gold_chip.name=Gold Chip
+item.security_wrench.name=Security Wrench
+item.wallet.name=Wallet
+
+#Blocks
+
+tile.bank.name=Bank
+tile.network_cable.name=Network Cable
+tile.network_cable_opaque.name=Network Cable (Opaque)
+tile.network_gate_connected.name=Network Gate
+tile.network_gate_disabled.name=Network Gate
+tile.trading_post.name=Trading Post
+tile.market.name=Market
+
+#Tabs
+
+itemGroup.icmoney.tabMain=IC Money
+
+#Config
+config.title = IC Money Config

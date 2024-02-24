@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "icmoney:penny"
+    }
+  ],
+  "type": "forge:ore_shapeless",
+  "group": "coin_nickel",
+  "ingredients": [
+    {
+      "item": "icmoney:coin_quarter"
+    }
+  ],
+  "result": {
+    "item": "icmoney:coin_nickel",
+    "count": 5
+  }
+}

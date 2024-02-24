@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "type": "icmoney:penny"
+    }
+  ],
+  "type": "forge:ore_shapeless",
+  "group": "coin_dollar",
+  "ingredients": [
+    {
+      "item": "icmoney:coin_quarter"
+    },
+    {
+      "item": "icmoney:coin_quarter"
+    },
+    {
+      "item": "icmoney:coin_quarter"
+    },
+    {
+      "item": "icmoney:coin_quarter"
+    }
+  ],
+  "result": {
+    "item": "icmoney:coin_dollar",
+    "count": 1
+  }
+}

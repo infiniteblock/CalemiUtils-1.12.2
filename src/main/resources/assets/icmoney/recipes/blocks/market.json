@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "CIC",
+    "IDI",
+    "CIC"
+  ],
+  "key": {
+    "C": {
+      "item": "icmoney:gold_chip"
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    },
+    "D": {
+      "item": "icmoney:coin_dollar"
+    }
+  },
+  "result": {
+    "item": "icmoney:market",
+    "count": 1
+  }
+}

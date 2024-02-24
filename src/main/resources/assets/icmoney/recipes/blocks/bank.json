@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "CIC",
+    "IWI",
+    "CIC"
+  ],
+  "key": {
+    "C": {
+      "item": "icmoney:gold_chip"
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    },
+    "W": {
+      "item": "icmoney:wallet"
+    }
+  },
+  "result": {
+    "item": "icmoney:bank",
+    "count": 1
+  }
+}

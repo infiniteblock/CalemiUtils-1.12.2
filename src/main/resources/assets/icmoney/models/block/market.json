@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "particle": "blocks/crafting_table_front",
+    "down": "icmoney:blocks/unit_side",
+    "up": "icmoney:blocks/market_top",
+    "north": "icmoney:blocks/market_side",
+    "east": "icmoney:blocks/market_side",
+    "south": "icmoney:blocks/market_side",
+    "west": "icmoney:blocks/market_side"
+  }
+}

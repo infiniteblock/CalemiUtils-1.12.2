@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " I ",
+    " CI",
+    "S  "
+  ],
+  "key": {
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    },
+    "C": {
+      "item": "icmoney:gold_chip"
+    }
+  },
+  "result": {
+    "item": "icmoney:security_wrench",
+    "count": 1
+  }
+}

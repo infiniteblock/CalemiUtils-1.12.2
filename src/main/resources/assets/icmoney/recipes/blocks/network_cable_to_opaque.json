@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "icmoney:network_cable"
+    }
+  ],
+  "result": {
+    "item": "icmoney:network_cable_opaque",
+    "count": 1
+  }
+}
