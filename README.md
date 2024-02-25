@@ -1,6 +1,6 @@
 ![](banner.png)
 
-![Discord](https://img.shields.io/discord/703124643149643818?logo=discord&link=https%3A%2F%2Fdiscord.gg%2FhQyAEZV) ![CurseForge Downloads](https://img.shields.io/curseforge/dt/557428?logo=curseforge&link=https%3A%2F%2Fwww.curseforge.com%2Fminecraft%2Fmc-mods%2Fmatter-overdrive-community-edition) ![Modrinth Downloads](https://img.shields.io/modrinth/dt/xNn9ASDj?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fmoce)
+![Discord](https://img.shields.io/discord/703124643149643818?logo=discord&link=https%3A%2F%2Fdiscord.gg%2FhQyAEZV) ![CurseForge Downloads](https://img.shields.io/curseforge/dt/557428?logo=curseforge&link=https%3A%2F%2Fwww.curseforge.com%2Fminecraft%2Fmc-mods%2Ficmoney) ![Modrinth Downloads](https://img.shields.io/modrinth/dt/xNn9ASDj?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Ficmoney)
 
 ## Table of Contents
 * [About](#about)
@@ -9,11 +9,11 @@
 * [Blocks](#blocks)
 
 ## About
-ICMoney is a Minecraft mod built from CalemiUtils-1.12.2. It was built to be used soley as an economy plugin with spongeforge servers.
+ICMoney is a Minecraft mod built from CalemiUtils-1.12.2. It was built to be used solely as an economy plugin with spongeforge servers.
 
 ## Mod-Links
-* [Modrinth](https://modrinth.com/mod/)
-* [Curseforge](https://www.curseforge.com/minecraft/mc-mods/)
+* [Modrinth](https://modrinth.com/project/icmoney)
+* [Curseforge](https://www.curseforge.com/minecraft/mc-mods/icmoney)
 * [Discord](https://discord.gg/hQyAEZV)
 
 ## Items
