@@ -6,7 +6,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 
 import icmoney.ICMoney;
 import icmoney.block.base.BlockInventoryContainerBase;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.tileentity.TileEntityBank;
 import icmoney.util.HardnessConstants;
 import icmoney.util.IExtraInformation;
@@ -33,7 +33,7 @@ public class BlockBank extends BlockInventoryContainerBase implements IExtraInfo
 		super("bank", MaterialSound.IRON, HardnessConstants.SECURED);
 		setCreativeTab(ICMoney.TAB);
 		setBlockUnbreakable();
-		if (CUConfig.blockUtils.bank && CUConfig.economy.economy)
+		if (ICMConfig.blockUtils.bank && ICMConfig.economy.economy)
 			addBlock();
 	}
 

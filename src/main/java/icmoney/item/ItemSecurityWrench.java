@@ -2,7 +2,7 @@ package icmoney.item;
 
 import java.util.List;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.event.WrenchEvent;
 import icmoney.item.base.ItemBase;
 import icmoney.security.ISecurity;
@@ -24,7 +24,7 @@ public class ItemSecurityWrench extends ItemBase {
 	public ItemSecurityWrench() {
 
 		super("security_wrench", 1);
-		if (CUConfig.itemUtils.securityWrench)
+		if (ICMConfig.itemUtils.securityWrench)
 			addItem();
 	}
 
@@ -42,7 +42,7 @@ public class ItemSecurityWrench extends ItemBase {
 				ISecurity security = (ISecurity) location.getTileEntity();
 
 				if (security.getSecurityProfile().isOwner(player.getName()) || player.capabilities.isCreativeMode
-						|| !CUConfig.misc.useSecurity) {
+						|| !ICMConfig.misc.useSecurity) {
 					WrenchEvent.onBlockWrenched(world, location);
 					return EnumActionResult.SUCCESS;
 

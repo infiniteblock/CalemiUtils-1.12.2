@@ -4,7 +4,7 @@ import java.util.List;
 
 import icmoney.ICMoney;
 import icmoney.block.base.BlockContainerBase;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.tileentity.TileEntityNetworkCable;
 import icmoney.util.HardnessConstants;
 import icmoney.util.MaterialSound;
@@ -23,7 +23,7 @@ public class BlockNetworkCableOpaque extends BlockContainerBase {
 		super(name, MaterialSound.IRON, HardnessConstants.SECURED);
 		if (hasTab)
 			setCreativeTab(ICMoney.TAB);
-		if (CUConfig.blockUtils.networkCable)
+		if (ICMConfig.blockUtils.networkCable)
 			addBlock();
 	}
 

@@ -6,7 +6,7 @@ import org.lwjgl.input.Keyboard;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 
 public class LoreHelper {
 
@@ -19,7 +19,7 @@ public class LoreHelper {
 
 	public static void addInformationLore(List<String> tooltip, String lore) {
 
-		if (CUConfig.tooltips.showInfoOnTooltips) {
+		if (ICMConfig.tooltips.showInfoOnTooltips) {
 
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
 				tooltip.add(ChatFormatting.ITALIC + lore);
@@ -37,7 +37,7 @@ public class LoreHelper {
 
 	public static void addControlsLore(List<String> tooltip, String lore, LoreHelper.Type type, boolean isFirst) {
 
-		if (CUConfig.tooltips.showControlsOnTooltips) {
+		if (ICMConfig.tooltips.showControlsOnTooltips) {
 
 			if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL) || Keyboard.isKeyDown(Keyboard.KEY_RCONTROL)) {
 

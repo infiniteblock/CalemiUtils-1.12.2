@@ -6,7 +6,7 @@ import org.lwjgl.opengl.GL11;
 
 import icmoney.ICMReference;
 import icmoney.ICMoney;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.config.MarketItemsFile;
 import icmoney.gui.base.GuiButtonRect;
 import icmoney.gui.base.GuiMarketButton;
@@ -92,7 +92,7 @@ public class GuiMarket extends GuiScreenBase {
 
 		TileEntityBank bank = teMarket.getBank();
 
-		if (bank != null && bank.getStoredCurrency() + price <= CUConfig.misc.bankCurrencyCapacity) {
+		if (bank != null && bank.getStoredCurrency() + price <= ICMConfig.misc.bankCurrencyCapacity) {
 
 			return PayType.BANK;
 		}
@@ -101,7 +101,7 @@ public class GuiMarket extends GuiScreenBase {
 
 			int balance = ItemWallet.getBalance(getCurrentWalletStack());
 
-			if (balance + price <= CUConfig.wallet.walletCurrencyCapacity) {
+			if (balance + price <= ICMConfig.wallet.walletCurrencyCapacity) {
 				return PayType.WALLET;
 			}
 		}
@@ -128,12 +128,12 @@ public class GuiMarket extends GuiScreenBase {
 
 		if (getPaymentTypeFromSpace(price) == PayType.BANK) {
 
-			return CUConfig.misc.bankCurrencyCapacity;
+			return ICMConfig.misc.bankCurrencyCapacity;
 		}
 
 		else if (getPaymentTypeFromSpace(price) == PayType.WALLET) {
 
-			return CUConfig.wallet.walletCurrencyCapacity;
+			return ICMConfig.wallet.walletCurrencyCapacity;
 		}
 
 		return 0;

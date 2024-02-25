@@ -7,7 +7,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
 import icmoney.ICMoney;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.init.InitItems;
 import icmoney.item.base.ItemBase;
 import icmoney.util.helper.InventoryHelper;
@@ -30,7 +30,7 @@ public class ItemWallet extends ItemBase implements IBauble {
 	public ItemWallet() {
 
 		super("wallet", 1);
-		if (CUConfig.itemUtils.wallet)
+		if (ICMConfig.itemUtils.wallet)
 			addItem();
 	}
 
@@ -61,19 +61,19 @@ public class ItemWallet extends ItemBase implements IBauble {
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
-		LoreHelper.addDisabledLore(tooltip, CUConfig.wallet.walletCurrencyCapacity);
+		LoreHelper.addDisabledLore(tooltip, ICMConfig.wallet.walletCurrencyCapacity);
 		LoreHelper.addInformationLore(tooltip, "Used to store currency in one place.");
 		LoreHelper.addControlsLore(tooltip, "Open Inventory", LoreHelper.Type.USE, true);
 		tooltip.add("");
 		tooltip.add(ChatFormatting.AQUA + (isActive(stack) ? "Active" : "Inactive"));
 		tooltip.add("Suck: " + ChatFormatting.AQUA + (ItemHelper.getNBT(stack).getBoolean("suck") ? "ON" : "OFF"));
-		LoreHelper.addCurrencyLore(tooltip, getBalance(stack), CUConfig.wallet.walletCurrencyCapacity);
+		LoreHelper.addCurrencyLore(tooltip, getBalance(stack), ICMConfig.wallet.walletCurrencyCapacity);
 	}
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 
-		if (!worldIn.isRemote && CUConfig.wallet.walletCurrencyCapacity > 0 && playerIn != null
+		if (!worldIn.isRemote && ICMConfig.wallet.walletCurrencyCapacity > 0 && playerIn != null
 				&& !playerIn.getHeldItemMainhand().isEmpty()) {
 
 			playerIn.openGui(ICMoney.instance, ICMoney.guiIdWallet, worldIn, (int) playerIn.posX, (int) playerIn.posY,
@@ -115,7 +115,7 @@ public class ItemWallet extends ItemBase implements IBauble {
 						int value = ((ItemCurrency) coinStack.getItem()).value;
 
 						if (InventoryHelper.countItems(player.inventory, false, false, coinStack) > 0
-								&& getBalance(stack) + value <= CUConfig.wallet.walletCurrencyCapacity) {
+								&& getBalance(stack) + value <= ICMConfig.wallet.walletCurrencyCapacity) {
 							InventoryHelper.consumeItem(player.inventory, 1, false, coinStack);
 							nbt.setInteger("balance", getBalance(stack) + value);
 							break;

@@ -5,7 +5,7 @@ import java.util.List;
 import org.lwjgl.opengl.GL11;
 
 import icmoney.ICMoney;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.gui.base.GuiButtonRect;
 import icmoney.gui.base.GuiContainerBase;
 import icmoney.init.InitItems;
@@ -156,7 +156,7 @@ public class GuiWallet extends GuiContainerBase {
 
 			GuiHelper.drawCenteredString(StringHelper.printCommas(ItemHelper.getNBT(stack).getInteger("balance")),
 					getScreenX() + getGuiSizeX() / 2 - 16, getScreenY() + 42, TEXT_COLOR);
-			GuiHelper.drawCenteredString(CUConfig.economy.currencyName, getScreenX() + getGuiSizeX() / 2 - 16,
+			GuiHelper.drawCenteredString(ICMConfig.economy.currencyName, getScreenX() + getGuiSizeX() / 2 - 16,
 					getScreenY() + 51, TEXT_COLOR);
 		}
 	}

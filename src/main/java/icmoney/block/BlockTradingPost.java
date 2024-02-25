@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 
 import icmoney.ICMoney;
 import icmoney.block.base.BlockInventoryContainerBase;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.init.InitItems;
 import icmoney.item.ItemWallet;
 import icmoney.tileentity.TileEntityTradingPost;
@@ -53,7 +53,7 @@ public class BlockTradingPost extends BlockInventoryContainerBase implements IEx
 
 		super("trading_post", MaterialSound.IRON, HardnessConstants.SECURED);
 		setCreativeTab(ICMoney.TAB);
-		if (CUConfig.blockUtils.tradingPost && CUConfig.economy.economy)
+		if (ICMConfig.blockUtils.tradingPost && ICMConfig.economy.economy)
 			addBlock();
 	}
 
@@ -216,7 +216,7 @@ public class BlockTradingPost extends BlockInventoryContainerBase implements IEx
 
 				NBTTagCompound nbt = ItemHelper.getNBT(walletStack);
 
-				if (tePost.getStoredCurrencyInBank() + tePost.salePrice < CUConfig.misc.postCurrencyCapacity) {
+				if (tePost.getStoredCurrencyInBank() + tePost.salePrice < ICMConfig.misc.postCurrencyCapacity) {
 
 					ItemStack is = new ItemStack(tePost.getStackForSale().getItem(), tePost.amountForSale,
 							tePost.getStackForSale().getItemDamage());

@@ -3,7 +3,7 @@ package icmoney.util.helper;
 import java.text.DecimalFormat;
 import java.util.List;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 
 public class StringHelper {
 
@@ -18,7 +18,7 @@ public class StringHelper {
 
 	public static String printCurrency(int amount) {
 
-		return printCommas(amount) + " " + CUConfig.economy.currencyName;
+		return printCommas(amount) + " " + ICMConfig.economy.currencyName;
 	}
 
 	public static String[] getArrayFromList(List<String> list) {

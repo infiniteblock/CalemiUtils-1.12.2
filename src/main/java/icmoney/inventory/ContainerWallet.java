@@ -1,6 +1,6 @@
 package icmoney.inventory;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.init.InitItems;
 import icmoney.inventory.base.ContainerBase;
 import icmoney.inventory.base.ItemStackInventory;
@@ -64,7 +64,7 @@ public class ContainerWallet extends ContainerBase {
 
 			for (int i = 0; i < stack.getCount(); i++) {
 
-				if (balance + currency.value <= CUConfig.wallet.walletCurrencyCapacity) {
+				if (balance + currency.value <= ICMConfig.wallet.walletCurrencyCapacity) {
 
 					balance += currency.value;
 

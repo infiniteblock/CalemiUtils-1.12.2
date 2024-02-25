@@ -16,9 +16,9 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Config(modid = ICMReference.MOD_ID, name = ICMReference.MOD_NAME)
+@Config(modid = ICMReference.MOD_ID, name = "ICMoney/ICMoney")
 @Config.LangKey("config.title")
-public class CUConfig implements IConditionFactory {
+public class ICMConfig implements IConditionFactory {
 
 	public static final CategoryItemUtils itemUtils = new CategoryItemUtils();
 	public static final CategoryBlockUtils blockUtils = new CategoryBlockUtils();
@@ -85,6 +85,18 @@ public class CUConfig implements IConditionFactory {
 	}
 
 	public static class CategoryEconomy {
+		
+		@Name("Webhook Head URL")
+		@Config.Comment("Player Head Url. - default = https://mc-heads.net/avatar/")
+		public String AvatarURL = "https://mc-heads.net/avatar/";
+
+		@Name("Webhook URL")
+		@Config.Comment("Discord Webhook URL.")
+		public String webhookURL = "";
+
+		@Name("Enable Discord Integration")
+		@Config.Comment("Disable this to not advertise items listed for sale on Discord.")
+		public boolean discord = true;
 
 		@Name("Enable Economy")
 		@Config.Comment("Disable this to remove Economy and everything that uses it.")

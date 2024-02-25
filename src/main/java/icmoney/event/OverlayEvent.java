@@ -1,6 +1,6 @@
 package icmoney.event;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.item.ItemWallet;
 import icmoney.util.helper.CurrencyHelper;
 import icmoney.util.helper.GuiHelper;
@@ -25,7 +25,7 @@ public class OverlayEvent {
 		ItemStack walletStack = CurrencyHelper.getCurrentWalletStack(player);
 
 		// Wallet Currency
-		if (CUConfig.wallet.walletOverlay && !walletStack.isEmpty() && Minecraft.getMinecraft().currentScreen == null) {
+		if (ICMConfig.wallet.walletOverlay && !walletStack.isEmpty() && Minecraft.getMinecraft().currentScreen == null) {
 
 			if (event.getType() == RenderGameOverlayEvent.ElementType.TEXT) {
 

@@ -3,7 +3,7 @@ package icmoney.tileentity;
 import java.util.ArrayList;
 import java.util.List;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.gui.GuiBank;
 import icmoney.inventory.ContainerBank;
 import icmoney.item.ItemCurrency;
@@ -170,6 +170,6 @@ public class TileEntityBank extends TileEntityInventoryBase
 	@Override
 	public int getMaxCurrency() {
 
-		return CUConfig.misc.bankCurrencyCapacity;
+		return ICMConfig.misc.bankCurrencyCapacity;
 	}
 }

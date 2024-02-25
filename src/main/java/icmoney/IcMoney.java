@@ -1,6 +1,6 @@
 package icmoney;
 
-import icmoney.command.CUCommandBase;
+import icmoney.command.ICMCommandBase;
 import icmoney.config.MarketItemsFile;
 import icmoney.event.JoinEvent;
 import icmoney.event.KeepWalletEvent;
@@ -74,6 +74,6 @@ public class ICMoney {
 	@EventHandler
 	public void serverStart(FMLServerStartingEvent event) {
 
-		event.registerServerCommand(new CUCommandBase());
+		event.registerServerCommand(new ICMCommandBase());
 	}
 }

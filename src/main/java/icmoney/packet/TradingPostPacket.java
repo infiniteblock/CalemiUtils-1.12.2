@@ -1,9 +1,12 @@
 package icmoney.packet;
 
+import icmoney.config.ICMConfig;
 import icmoney.tileentity.TileEntityTradingPost;
+import icmoney.util.DiscordHook;
 import icmoney.util.Location;
 import icmoney.util.helper.ItemHelper;
 import icmoney.util.helper.PacketHelper;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
@@ -24,6 +27,7 @@ public class TradingPostPacket extends ServerPacketHandler {
 	}
 
 	public static class Handler implements IMessageHandler<TradingPostPacket, IMessage> {
+		private DiscordHook discordHook;
 
 		@Override
 		public IMessage onMessage(TradingPostPacket message, MessageContext ctx) {
@@ -73,7 +77,15 @@ public class TradingPostPacket extends ServerPacketHandler {
 					if (data.length > 5) {
 						ItemHelper.attachNBTFromString(stack, data[5]);
 					}
+					if (ICMConfig.economy.discord) {
+						if (stack.getItem() != Items.AIR) {
 
+							discordHook = new DiscordHook();
+							discordHook.sendCommand(":loudspeaker: New Offer: " + tileEntity.amountForSale + " "
+									+ stack.getDisplayName() + " For $" + tileEntity.salePrice + " :fire::exclamation:",
+									ctx.getServerHandler().player.getName());
+						}
+					}
 					tileEntity.setStackForSale(stack);
 					tileEntity.markForUpdate();
 				}

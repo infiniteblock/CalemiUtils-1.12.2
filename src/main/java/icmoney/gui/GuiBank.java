@@ -1,7 +1,7 @@
 package icmoney.gui;
 
 import icmoney.ICMoney;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.gui.base.GuiButtonRect;
 import icmoney.gui.base.GuiContainerBase;
 import icmoney.item.ItemWallet;
@@ -89,7 +89,7 @@ public class GuiBank extends GuiContainerBase {
 			if (button.id == withdraw.id) {
 
 				int amountToAdd = MathHelper.getAmountToAdd(currency, teBank.storedCurrency,
-						CUConfig.wallet.walletCurrencyCapacity);
+						ICMConfig.wallet.walletCurrencyCapacity);
 
 				if (amountToAdd > 0) {
 					teBank.addCurrency(-amountToAdd);
@@ -99,7 +99,7 @@ public class GuiBank extends GuiContainerBase {
 				else {
 
 					int remainder = MathHelper.getRemainder(currency, teBank.storedCurrency,
-							CUConfig.wallet.walletCurrencyCapacity);
+							ICMConfig.wallet.walletCurrencyCapacity);
 
 					if (remainder > 0) {
 						teBank.addCurrency(-remainder);

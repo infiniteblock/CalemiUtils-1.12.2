@@ -2,7 +2,7 @@ package icmoney.util;
 
 import java.util.ArrayList;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.tileentity.base.INetwork;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -61,7 +61,7 @@ public class VeinScan {
 	private void scan(Location location, int customMazSize, boolean useRadiusToBranch) {
 
 		if (customMazSize == 0) {
-			customMazSize = CUConfig.blockScans.veinScanMaxSize;
+			customMazSize = ICMConfig.blockScans.veinScanMaxSize;
 		}
 
 		if (buffer.size() >= customMazSize) {
@@ -113,7 +113,7 @@ public class VeinScan {
 
 	private void scanNetwork(Location location, EnumFacing oldDir) {
 
-		if (buffer.size() >= CUConfig.blockScans.veinScanMaxSize) {
+		if (buffer.size() >= ICMConfig.blockScans.veinScanMaxSize) {
 			return;
 		}
 

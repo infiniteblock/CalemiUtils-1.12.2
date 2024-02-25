@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.item.base.ItemBase;
 import icmoney.util.CoinColor;
 import icmoney.util.helper.StringHelper;
@@ -24,7 +24,7 @@ public class ItemCurrency extends ItemBase {
 		this.configName = configName;
 		this.color = color;
 		this.value = value;
-		if (CUConfig.economy.economy)
+		if (ICMConfig.economy.economy)
 			addItem();
 	}
 

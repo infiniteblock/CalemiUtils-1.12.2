@@ -1,6 +1,6 @@
 package icmoney.event;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.init.InitItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -15,7 +15,7 @@ public class JoinEvent {
 	@SubscribeEvent
 	public void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
 
-		if (CUConfig.wallet.startingWallet && CUConfig.itemUtils.wallet) {
+		if (ICMConfig.wallet.startingWallet && ICMConfig.itemUtils.wallet) {
 
 			// Code Credit (diesieben07)
 			NBTTagCompound data = event.player.getEntityData();

@@ -4,7 +4,7 @@ import java.util.List;
 
 import icmoney.ICMoney;
 import icmoney.block.base.BlockContainerBase;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.gui.GuiMarket;
 import icmoney.tileentity.TileEntityMarket;
 import icmoney.util.HardnessConstants;
@@ -30,7 +30,7 @@ public class BlockMarket extends BlockContainerBase {
 
 		super("market", MaterialSound.IRON, HardnessConstants.SECURED);
 		setCreativeTab(ICMoney.TAB);
-		if (CUConfig.blockUtils.market)
+		if (ICMConfig.blockUtils.market)
 			addBlock();
 	}
 

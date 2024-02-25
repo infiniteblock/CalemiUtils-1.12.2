@@ -1,6 +1,6 @@
 package icmoney.util.helper;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.security.ISecurity;
 import icmoney.tileentity.base.TileEntityBase;
 import icmoney.util.Location;
@@ -20,7 +20,7 @@ public class SecurityHelper {
 			ISecurity security = (ISecurity) tileEntity;
 
 			if (security.getSecurityProfile().isOwner(player.getName()) || player.capabilities.isCreativeMode
-					|| !CUConfig.misc.useSecurity) {
+					|| !ICMConfig.misc.useSecurity) {
 
 				return true;
 			}

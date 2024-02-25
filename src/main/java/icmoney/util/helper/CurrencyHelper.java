@@ -5,7 +5,7 @@ import java.util.List;
 
 import baubles.api.BaublesApi;
 import baubles.api.cap.IBaublesItemHandler;
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.item.ItemWallet;
 import icmoney.tileentity.base.ICurrencyNetworkBank;
 import net.minecraft.entity.player.EntityPlayer;
@@ -119,7 +119,7 @@ public class CurrencyHelper {
 
 		if (!walletStack.isEmpty() && walletStack.getItem() instanceof ItemWallet) {
 
-			return ItemWallet.getBalance(walletStack) + addAmount <= CUConfig.wallet.walletCurrencyCapacity;
+			return ItemWallet.getBalance(walletStack) + addAmount <= ICMConfig.wallet.walletCurrencyCapacity;
 		}
 
 		return false;

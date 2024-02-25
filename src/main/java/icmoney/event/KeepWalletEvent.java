@@ -1,6 +1,6 @@
 package icmoney.event;
 
-import icmoney.config.CUConfig;
+import icmoney.config.ICMConfig;
 import icmoney.item.ItemWallet;
 import icmoney.util.Location;
 import icmoney.util.helper.ItemHelper;
@@ -14,7 +14,7 @@ public class KeepWalletEvent {
 	@SubscribeEvent
 	public void onPlayerDrops(PlayerDropsEvent event) {
 
-		if (CUConfig.wallet.keepWallet) {
+		if (ICMConfig.wallet.keepWallet) {
 			World world = event.getEntityPlayer().world;
 			Location location = new Location(world, world.getSpawnPoint());
 
